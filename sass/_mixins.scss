@@ -1,0 +1,6 @@
+@mixin heroImg($gradient, $img) {
+	background-image: $gradient, url($img);
+	background-size: cover;
+	background-position: center;
+	background-attachment: fixed;
+}
