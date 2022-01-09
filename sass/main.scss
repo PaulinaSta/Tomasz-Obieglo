@@ -102,6 +102,39 @@ body {
 		animation: menuItemAnimation 1s;
 	}
 
+	&__logo-btn {
+		position: fixed;
+		left: 0;
+		top: 30px;
+		padding: 0.5em 0.8em;
+		margin: 0 3em;
+		font-size: 1.8rem;
+		text-transform: uppercase;
+		text-align: right;
+
+		&::before,
+		&::after {
+			content: '';
+			position: absolute;
+			height: 30px;
+			width: 50px;
+		}
+
+		&::before {
+			top: 0;
+			left: 0;
+			border-top: 4px solid $accentColor;
+			border-left: 4px solid $accentColor;
+		}
+
+		&::after {
+			bottom: 0;
+			right: 0;
+			border-bottom: 4px solid $accentColor;
+			border-right: 4px solid $accentColor;
+		}
+	}
+
 	&__items {
 		display: flex;
 		flex-direction: column;
@@ -167,8 +200,8 @@ body {
 	&__title {
 		margin: 0.5em 0;
 		font-size: 5.6rem;
-		color: $accentColor; 
-	}  
+		color: $accentColor;
+	}
 
 	&__subtitle {
 		margin-bottom: 2em;
@@ -227,9 +260,19 @@ body {
 		background-image: none;
 		// backdrop-filter: blur(10px);
 
+		&__logo-btn {
+			position: absolute;
+			top: 50%;
+			transform: translateY(-50%);
+		}
+
 		&__items {
 			flex-direction: row;
 			justify-content: flex-end;
+		}
+
+		&__item {
+			margin: 1.4em;
 		}
 	}
 

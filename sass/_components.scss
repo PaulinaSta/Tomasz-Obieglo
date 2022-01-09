@@ -2,6 +2,10 @@
 	margin: 0 auto;
 	width: 100%;
 	max-width: 1200px;
+
+	&--menu {
+		position: relative;
+	}
 }
 
 .link {
@@ -44,6 +48,23 @@
 			transform: rotate(20deg) translateX(220%);
 		}
 	}
+}
+
+.bold {
+	font-weight: 700;
+}
+
+.accent-color {
+	color: $accentColor;
+}
+
+.next-line::before {
+	content: '\a';
+	white-space: pre;
+}
+
+.small-text {
+	font-size: 1.2rem;
 }
 
 /* ----------------------------------------------
