@@ -1,6 +1,11 @@
 $accentColor: #bcd150;
 $darkColor: #1c1c1c;
+$grayColor: #181818;
 $whiteColor: #ffffff;
+$opacityWhiteColor: hsla(0, 0%, 100%, 0.02);
+$accentColor2: #fec520;
 
-$opacityBlackGradient: linear-gradient(45deg, rgba(0, 0, 0, 1), rgba(0, 0, 0, 0.7));
-$darkGradient: linear-gradient(45deg, #000000, #1c1c1c);
+$opacityBlackGradient: linear-gradient(-45deg, rgba(0, 0, 0, 1), rgba(0, 0, 0, 0.7));
+$opacityAccentGradient: linear-gradient(45deg, rgba(0, 0, 0, 1), rgba(188, 209, 80, 0.7));
+$darkGradient: linear-gradient(-45deg, #000000, #1c1c1c);
+$bgGradient: linear-gradient(-20deg, #181818 50%, #1c1c1c 50%);
