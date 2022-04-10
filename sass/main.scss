@@ -189,6 +189,8 @@ body {
 .about {
 	background-image: $bgGradient;
 	background-attachment: fixed;
+	display: flex;
+	flex-direction: column;
 
 	.wrapper {
 		@include flexCenter(center, center);
@@ -210,20 +212,48 @@ body {
 			max-height: 600px;
 		}
 	}
+
+	&__features-box {
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: stretch;
+		background-color: rgba(255, 255, 255, 0.46);
+		width: 100%;
+	}
+
+	&__feature {
+		padding: 4em 2em;
+		text-align: center;
+	}
+
+	&__feature--1 {
+		background-color: #333;
+	}
+	&__feature--2 {
+		background-color: #666;
+	}
+	&__feature--3 {
+		background-color: #333;
+	}
 }
 
 // OFFER
 
 .offer {
 	flex-direction: column;
+	background-color: #222222;
 	&__items {
 		display: flex;
 		flex-direction: column;
-		margin: 4em 0 2em 0;
+		// margin: 4em 0;
 	}
 
 	&__item {
+		display: flex;
+		flex-direction: column;
 		margin-bottom: 2em;
+		box-shadow: 2px 2px 4px 0 #000;
 
 		&:hover .offer__img {
 			transform: scale(1.1);
@@ -231,7 +261,7 @@ body {
 	}
 
 	&__img-container {
-		height: 200px;
+		height: 240px;
 		overflow: hidden;
 	}
 
@@ -253,6 +283,9 @@ body {
 	}
 
 	&__text-container {
+		flex: 1;
+		display: flex;
+		flex-direction: column;
 		background-color: $blackColor;
 		padding: 2em 1em;
 	}
@@ -267,53 +300,48 @@ body {
 	}
 
 	&__text-footer {
+		margin-top: auto;
 		margin-bottom: 0;
-		// text-transform: uppercase;
 	}
 
-	&__reservation-box {
-		position: relative;
-		align-self: stretch;
-		display: flex;
-		flex-direction: column;
-		justify-content: center;
-		align-items: center;
-		height: 300px;
-		// padding: 10em 2em;
-		text-align: center;
-		background-image: url('../img/res-small.jpg');
-		background-position: center;
-		background-size: cover;
-		z-index: 0;
-	}
+	// &__reservation-box {
+	// 	position: relative;
+	// 	align-self: stretch;
+	// 	display: flex;
+	// 	flex-direction: column;
+	// 	justify-content: center;
+	// 	align-items: center;
+	// 	height: 300px;
+	// 	padding: 0 2em;
+	// 	text-align: center;
+	// 	background-image: url('../img/res-small.jpg');
+	// 	background-position: center;
+	// 	background-size: cover;
+	// 	z-index: 0;
+	// }
 
-	&__reservation-box-shadow {
-		position: absolute;
-		top: 0;
-		left: 0;
-		height: 100%;
-		width: 100%;
-		background-image: $opacityBlackGradient;
-		// background-color: rgba(188, 209, 80, 0.8);
-		z-index: -1;
-	}
+	// &__reservation-box-shadow {
+	// 	position: absolute;
+	// 	top: 0;
+	// 	left: 0;
+	// 	height: 100%;
+	// 	width: 100%;
+	// 	background-image: $opacityBlackGradient;
+	// 	// background-color: rgba(188, 209, 80, 0.8);
+	// 	z-index: -1;
+	// }
 
-	&__reservation-text {
-		text-transform: uppercase;
-		margin-bottom: 2em;
-		// color: $darkColor;
-	}
-
-	.btn {
-		// background-color: $grayColor;
-		// border: none;
-	}
+	// &__reservation-text {
+	// 	text-transform: uppercase;
+	// 	margin-bottom: 2em;
+	// 	// color: $darkColor;
+	// }
 }
 
 // CONTACT
 
 .contact {
-	// @include heroImg($opacityBlackGradient, '../img/contact-small.jpg');
+	// @include heroImg($opacityBlackGradient, '../img/res-small.jpg');
 	// background-attachment: fixed;
 	background-color: $darkColor;
 
@@ -356,16 +384,21 @@ body {
 	&__form-container {
 		z-index: 0;
 		position: relative;
-		margin: 20px 0 0 20px;
+		// margin: 20px 0 0 20px;
+		margin: 0 20px 20px 0;
 
-		&::before {
+		&::after {
 			content: '';
 			position: absolute;
 			width: 100%;
 			height: 100%;
 			background-color: $accentColor;
-			left: -20px;
-			top: -20px;
+			box-shadow: 2px 2px 4px 0 #000;
+
+			// left: -20px;
+			// top: -20px;
+			left: 20px;
+			top: 20px;
 			z-index: -1;
 		}
 	}
@@ -417,6 +450,10 @@ body {
 			}
 		}
 	}
+
+	.res-btn {
+		margin-top: 1em;
+	}
 }
 
 // Footer
@@ -457,6 +494,12 @@ body {
 		padding: 6rem 0;
 	}
 
+	.offer {
+		&__img-container {
+			height: 300px;
+		}
+	}
+
 	.contact {
 		&__icon {
 			font-size: 2rem;
@@ -495,6 +538,16 @@ body {
 	.about {
 		.wrapper {
 			flex-direction: row;
+		}
+	}
+
+	.offer {
+		&__img-container {
+			height: 360px;
+		}
+
+		&__reservation-box {
+			height: 360px;
 		}
 	}
 
@@ -591,6 +644,27 @@ body {
 		}
 	}
 
+	.offer {
+		&__items {
+			flex-direction: row;
+			justify-content: space-between;
+			align-items: stretch;
+		}
+
+		&__item {
+			margin-bottom: 0;
+			width: 30%;
+		}
+
+		&__img-container {
+			height: 240px;
+		}
+
+		// &__reservation-box {
+		// 	height: 400px;
+		// }
+	}
+
 	.contact {
 		.form {
 			&__item {
@@ -599,126 +673,3 @@ body {
 		}
 	}
 }
-
-// @media (min-width: 576px) {
-// 	.about {
-// 		&__content-text {
-// 			grid-column: 1/2;
-// 			grid-row: 1/2;
-// 		}
-
-// 		&__content-img {
-// 			grid-column: 2/3;
-// 			grid-row: 1/2;
-// 		}
-
-// 		&__img {
-// 			height: 100%;
-// 		}
-// 	}
-// }
-
-// @media (min-width: 768px) {
-// 	.content-text {
-// 		line-height: 1.8em;
-// 	}
-
-// 	.menu {
-// 		&__logo-btn {
-// 			font-size: 1.8rem;
-// 		}
-
-// 		&__item {
-// 			font-size: 2rem;
-// 		}
-// 	}
-// 	.header {
-// 		&__title {
-// 			font-size: 6rem;
-// 		}
-
-// 		&__subtitle {
-// 			font-size: 2.4rem;
-// 		}
-// 	}
-// }
-
-// @media (min-width: 992px) {
-// 	html {
-// 		scroll-padding-top: 100px;
-// 	}
-
-// 	body {
-// 		font-size: 1.8rem;
-// 	}
-
-// 	.content-text {
-// 		line-height: 1.8em;
-// 	}
-
-// 	.burger-btn {
-// 		display: none;
-// 	}
-
-// 	.btn {
-// 		&--animation {
-// 			font-size: 1.8rem;
-// 		}
-// 	}
-
-// 	.menu {
-// 		height: auto;
-// 		transform: translateY(0);
-// 		background-image: none;
-
-// 		.wrapper {
-// 			align-items: flex-end;
-// 		}
-
-// 		&__bg {
-// 			display: block;
-// 		}
-
-// 		&__logo-btn {
-// 			position: absolute;
-// 			left: 0;
-// 			top: 50%;
-// 			transform: translateY(-50%);
-// 			margin: 0 1.4em;
-// 		}
-
-// 		&__items {
-// 			flex-direction: row;
-// 			justify-content: flex-end;
-// 		}
-
-// 		&__item {
-// 			margin: 1.4em;
-// 		}
-// 	}
-
-// 	.header {
-// 		background-image: $opacityBlackGradient, url('../img/header-big.jpg');
-
-// 		&__title {
-// 			font-size: 7rem;
-// 		}
-
-// 		&__subtitle {
-// 			font-size: 3rem;
-// 		}
-// 	}
-
-// 	.section {
-// 		height: calc(100vh - 100px);
-
-// 		&__heading {
-// 			font-size: 5rem;
-// 		}
-// 	}
-
-// 	.about {
-// 		&__content-text {
-// 			padding-right: 4em;
-// 		}
-// 	}
