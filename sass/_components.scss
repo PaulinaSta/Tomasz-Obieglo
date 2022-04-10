@@ -100,6 +100,16 @@
 			background-color: $accentColor;
 		}
 	}
+
+	&__left-container {
+		width: 100%;
+		padding: 2em 0;
+	}
+
+	&__right-container {
+		width: 100%;
+		padding: 2em 0;
+	}
 }
 
 .image {
@@ -113,6 +123,8 @@
 		width: 100%;
 		height: 100%;
 		background-color: $accentColor;
+		// border: 2px solid $accentColor;
+		// box-shadow: -20px -20px 20px 20px $accentColor;
 		left: -20px;
 		top: -20px;
 		z-index: -1;

@@ -195,20 +195,12 @@ body {
 		flex-direction: column;
 	}
 
-	&__text {
-		padding: 2em 0;
-	}
-
 	.content-text {
 		margin-bottom: 1em;
 	}
 
 	.btn {
 		margin: 1em 0 0;
-	}
-
-	&__img {
-		padding: 2em 0;
 	}
 
 	.image {
@@ -220,38 +212,111 @@ body {
 	}
 }
 
-// Contact
+// CONTACT
 
 .contact {
-	@include heroImg($opacityBlackGradient, '../img/contact-small.jpg');
-	background-attachment: fixed;
+	// @include heroImg($opacityBlackGradient, '../img/contact-small.jpg');
+	// background-attachment: fixed;
+	background-color: $darkColor;
 
-	&__items {
-		display: flex;
+	.wrapper {
+		@include flexCenter(center, center);
 		flex-direction: column;
 	}
 
-	&__item {
+	&__links {
 		display: flex;
 		flex-direction: column;
-		align-items: center;
-		font-size: 1.8rem;
-		margin: 1em;
-		padding: 2em 1em;
-		text-align: center;
-	}
-
-	&__icon {
-		font-size: 2.2rem;
-		margin-bottom: 1em;
-		color: $accentColor;
+		align-items: flex-start;
+		margin-top: 2em;
 	}
 
 	&__link {
+		display: flex;
+		align-items: center;
+		justify-content: flex-start;
+		margin-bottom: 1em;
+		padding: 1em 2em 1em 0;
 		transition: color 0.3s;
+
+		&--first-line {
+			display: inline-block;
+			margin-bottom: 0.5em;
+		}
 
 		&:hover {
 			color: $accentColor;
+		}
+	}
+
+	&__icon {
+		margin-right: 1em;
+		font-size: 1.8rem;
+		color: $accentColor;
+	}
+
+	&__form-container {
+		z-index: 0;
+		position: relative;
+		margin: 20px 0 0 20px;
+
+		&::before {
+			content: '';
+			position: absolute;
+			width: 100%;
+			height: 100%;
+			border: 2px solid $accentColor;
+			left: -20px;
+			top: -20px;
+			z-index: -1;
+		}
+	}
+
+	.form {
+		display: flex;
+		flex-direction: column;
+		padding: 20px;
+		background-color: $blackColor;
+
+		&__item {
+			display: flex;
+			flex-direction: column;
+			margin-bottom: 1em;
+		}
+
+		label {
+			margin-bottom: 0.5em;
+		}
+
+		input,
+		textarea {
+			background-color: $darkColor;
+			border: none;
+			color: $whiteColor;
+			padding: 0.5em 1em;
+			font-size: 1.6rem;
+
+			&:focus {
+				outline: none;
+				background-color: rgba(255, 255, 255, 0.1);
+			}
+		}
+
+		textarea {
+			font-family: 'Ubuntu', sans-serif;
+			resize: vertical;
+			min-height: 10em;
+		}
+
+		button {
+			align-self: flex-end;
+			color: $whiteColor;
+			background-color: transparent;
+
+			&:focus {
+				outline: none;
+				background-color: rgba(255, 255, 255, 0.1);
+			}
 		}
 	}
 }
@@ -293,9 +358,28 @@ body {
 	.section {
 		padding: 6rem 0;
 	}
+
+	.contact {
+		&__icon {
+			font-size: 2rem;
+		}
+	}
 }
 
 @media (min-width: 768px) {
+	.section {
+		&__left-container {
+			width: 50%;
+			// width: auto;
+			margin-right: 2em;
+		}
+
+		&__right-container {
+			width: 50%;
+			// width: auto;
+			padding: 2em 0;
+		}
+	}
 	.content-text {
 		line-height: 1.8em;
 	}
@@ -314,14 +398,20 @@ body {
 		.wrapper {
 			flex-direction: row;
 		}
+	}
 
-		&__text {
-			margin-right: 2em;
+	.contact {
+		.wrapper {
+			flex-direction: row;
 		}
 
-		&__img {
-			padding: 2em 0;
-		}
+		// .section__left-container {
+		// 	width: 50%;
+		// }
+
+		// .section__right-container {
+		// 	width: 50%;
+		// }
 	}
 }
 
@@ -397,11 +487,17 @@ body {
 		&__heading {
 			font-size: 5rem;
 		}
+
+		&__left-container {
+			margin-right: 4em;
+		}
 	}
 
-	.about {
-		&__text {
-			margin-right: 4em;
+	.contact {
+		.form {
+			&__item {
+				margin-bottom: 1.5em;
+			}
 		}
 	}
 }

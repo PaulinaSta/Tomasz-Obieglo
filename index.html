@@ -22,7 +22,6 @@
 </head>
 
 <body>
-
     <nav class="nav">
         <button class="burger-btn btn">
             <div class="burger-btn__bars">
@@ -44,7 +43,6 @@
             </div>
         </div>
     </nav>
-
     <header class="header">
         <div class="wrapper">
             <h1 class="header__title tracking-in-expand">Tomasz Obiegło</h1>
@@ -52,13 +50,10 @@
             <a href="#about" class="header__btn btn btn--animation link">Poznaj mnie</a>
         </div>
     </header>
-
     <main class="main">
-
         <section class="about section" id="about">
             <div class="wrapper">
-
-                <div class="about__text">
+                <div class="section__left-container">
                     <h3 class="section__heading">
                         O mnie
                     </h3>
@@ -79,12 +74,9 @@
                             funkcjonalnego</span> oraz łączyć tę wiedzę
                         z zagadnieniami z zakresu <span class="bold">fizjoterapii</span>.
                     </p>
-
                     <a href="#offer" class="btn btn--animation link">oferta</a>
                 </div>
-
-
-                <div class="about__img">
+                <div class="section__right-container">
                     <div class="image">
                         <div class="image__container">
                             <img src="./img/about-big.jpg"
@@ -92,46 +84,60 @@
                                 class="image__img">
                         </div>
                     </div>
-
                 </div>
-
-
-
-
-
-
-
             </div>
         </section>
-
-        <section class="contact section section--contact" id="contact">
+        <section class="contact section" id="contact">
             <div class="wrapper">
-                <div class="contact__items">
-                    <div class="contact__item">
-                        <i class="fas fa-phone-alt contact__icon"></i>
-                        <a href="tel:123456789" target="_blank" class="contact__link link">+48 123 456 789</a>
-                    </div>
-                    <div class="contact__item">
-                        <i class="far fa-envelope contact__icon"></i>
-                        <a href="mailto:mail@mail.com" target="_blank" class="contact__link link">mail@mail.com</a>
-                    </div>
-                    <div class="contact__item">
-                        <i class="fas fa-map-marker-alt contact__icon"></i>
+                <div class="section__left-container">
+                    <h3 class="section__heading">
+                        Kontakt
+                    </h3>
+                    <p class="content-text">W razie jakichkolwiek pytań - zapraszam do kontaktu!
+                    </p>
+                    <div class="contact__links">
+                        <a href="tel:123456789" target="_blank" class="contact__link link">
+                            <i class="fas fa-phone-alt contact__icon"></i>+48 123 456 789
+                        </a>
+                        <a href="mailto:mail@mail.com" target="_blank" class="contact__link link">
+                            <i class="far fa-envelope contact__icon"></i>mail@mail.com
+                        </a>
                         <a href="https://www.google.com/maps?ll=51.14163,17.071864&z=17&t=m&hl=pl&gl=PL&mapclient=embed&cid=7495762644167409228"
-                            target="_blank" class="contact__link link">ul. Sołtysowicka 19 <span
-                                class="next-line">51-168
-                                Wrocław</span></a>
+                            target="_blank" class="contact__link link">
+                            <i class="fas fa-map-marker-alt contact__icon"></i><span><span
+                                    class="contact__link--first-line">ul.
+                                    Sołtysowicka 19</span><span class="next-line">51-168
+                                    Wrocław</span></span>
+                        </a>
+                    </div>
+                </div>
+                <div class="section__right-container">
+                    <div class="contact__form-container">
+                        <form class="contact__form form">
+                            <div class="form__item">
+                                <label for="name">Imię:</label>
+                                <input type="text" id="name" name="name">
+                            </div>
+                            <div class="form__item">
+                                <label for="email">Adres e-mail:</label>
+                                <input type="email" id="email" name="email">
+                            </div>
+                            <div class="form__item">
+                                <label for="msg">Twoja wiadomość:</label>
+                                <textarea id="msg" name="msg"></textarea>
+                            </div>
+                            <button type="submit" class="btn btn--animation">wyślij</button>
+                        </form>
                     </div>
                 </div>
             </div>
         </section>
-
     </main>
-
     <footer class="footer">
         <p class="footer__text">&copy; <span class="footer__year"></span> Tomasz Obiegło</p>
+        <a href="https://zarejestrowani.pl/w/fYRgNAKKZ1XhS_NUN3dwnQ/" target="_blanc"
+            class="btn btn--animation link">rezerwacja</a>
     </footer>
-
     <script src="./js/script.js"></script>
 </body>
 

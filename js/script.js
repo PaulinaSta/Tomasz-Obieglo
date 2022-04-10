@@ -1,3 +1,10 @@
+console.log('%cTomasz Obiegło', 'font-size:60px; font-weight:bold; color:#bcd150; text-transform:uppercase')
+console.log(
+	'%ctrener personalny %cWrocław',
+	'font-size:30px; text-transform:uppercase',
+	'font-size:30px; text-transform:uppercase; font-weight:bold; color:#bcd150'
+)
+
 const burgerBtn = document.querySelector('.burger-btn')
 const menu = document.querySelector('.menu')
 const menuBg = document.querySelector('.menu__bg')
