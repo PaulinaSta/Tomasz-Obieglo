@@ -475,6 +475,118 @@ body {
   max-height: 600px;
 }
 
+.offer {
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.offer__items {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  margin: 4em 0 2em 0;
+}
+
+.offer__item {
+  margin-bottom: 2em;
+}
+
+.offer__item:hover .offer__img {
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
+}
+
+.offer__img-container {
+  height: 200px;
+  overflow: hidden;
+}
+
+.offer__img {
+  height: 100%;
+  background-size: cover;
+  background-position: center;
+  -webkit-transition: -webkit-transform 0.3s;
+  transition: -webkit-transform 0.3s;
+  transition: transform 0.3s;
+  transition: transform 0.3s, -webkit-transform 0.3s;
+}
+
+.offer__img--1 {
+  background-image: url("../img/offer1-small.jpg");
+}
+
+.offer__img--2 {
+  background-image: url("../img/offer2-small.jpg");
+}
+
+.offer__img--3 {
+  background-image: url("../img/offer3-small.jpg");
+}
+
+.offer__text-container {
+  background-color: #111111;
+  padding: 2em 1em;
+}
+
+.offer__text {
+  margin-bottom: 1em;
+}
+
+.offer__text-title {
+  text-transform: uppercase;
+  font-size: 1.8rem;
+}
+
+.offer__text-footer {
+  margin-bottom: 0;
+}
+
+.offer__reservation-box {
+  position: relative;
+  -ms-flex-item-align: stretch;
+      align-self: stretch;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 300px;
+  text-align: center;
+  background-image: url("../img/res-small.jpg");
+  background-position: center;
+  background-size: cover;
+  z-index: 0;
+}
+
+.offer__reservation-box-shadow {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background-image: linear-gradient(-45deg, rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.6));
+  z-index: -1;
+}
+
+.offer__reservation-text {
+  text-transform: uppercase;
+  margin-bottom: 2em;
+}
+
 .contact {
   background-color: #1c1c1c;
 }
@@ -551,7 +663,7 @@ body {
   position: absolute;
   width: 100%;
   height: 100%;
-  border: 2px solid #bcd150;
+  background-color: #bcd150;
   left: -20px;
   top: -20px;
   z-index: -1;

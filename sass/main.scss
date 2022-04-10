@@ -212,6 +212,104 @@ body {
 	}
 }
 
+// OFFER
+
+.offer {
+	flex-direction: column;
+	&__items {
+		display: flex;
+		flex-direction: column;
+		margin: 4em 0 2em 0;
+	}
+
+	&__item {
+		margin-bottom: 2em;
+
+		&:hover .offer__img {
+			transform: scale(1.1);
+		}
+	}
+
+	&__img-container {
+		height: 200px;
+		overflow: hidden;
+	}
+
+	&__img {
+		height: 100%;
+		background-size: cover;
+		background-position: center;
+		transition: transform 0.3s;
+
+		&--1 {
+			background-image: url('../img/offer1-small.jpg');
+		}
+		&--2 {
+			background-image: url('../img/offer2-small.jpg');
+		}
+		&--3 {
+			background-image: url('../img/offer3-small.jpg');
+		}
+	}
+
+	&__text-container {
+		background-color: $blackColor;
+		padding: 2em 1em;
+	}
+
+	&__text {
+		margin-bottom: 1em;
+	}
+
+	&__text-title {
+		text-transform: uppercase;
+		font-size: 1.8rem;
+	}
+
+	&__text-footer {
+		margin-bottom: 0;
+		// text-transform: uppercase;
+	}
+
+	&__reservation-box {
+		position: relative;
+		align-self: stretch;
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+		height: 300px;
+		// padding: 10em 2em;
+		text-align: center;
+		background-image: url('../img/res-small.jpg');
+		background-position: center;
+		background-size: cover;
+		z-index: 0;
+	}
+
+	&__reservation-box-shadow {
+		position: absolute;
+		top: 0;
+		left: 0;
+		height: 100%;
+		width: 100%;
+		background-image: $opacityBlackGradient;
+		// background-color: rgba(188, 209, 80, 0.8);
+		z-index: -1;
+	}
+
+	&__reservation-text {
+		text-transform: uppercase;
+		margin-bottom: 2em;
+		// color: $darkColor;
+	}
+
+	.btn {
+		// background-color: $grayColor;
+		// border: none;
+	}
+}
+
 // CONTACT
 
 .contact {
@@ -265,7 +363,7 @@ body {
 			position: absolute;
 			width: 100%;
 			height: 100%;
-			border: 2px solid $accentColor;
+			background-color: $accentColor;
 			left: -20px;
 			top: -20px;
 			z-index: -1;
