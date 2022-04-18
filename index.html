@@ -86,20 +86,75 @@
                     </div>
                 </div>
             </div>
-            <div class="about__features-box">
+            <div class="about__features">
                 <div class="about__feature about__feature--1">
-                    <i class="fa-solid fa-people-group"></i>
-                    <p>wspólna praca w zespole fizjoterapeutów</p>
+                    <i class="fa-solid fa-magnifying-glass about__feature-icon"></i>
+                    <p class="content-text">dokładna diagnostyka</p>
+                </div>
+                <div class="about__feature about__feature-img about__feature-img--1">
                 </div>
                 <div class="about__feature about__feature--2">
-                    <i class="fa-solid fa-magnifying-glass"></i>
-                    <p>dokładna diagnostyka</p>
+                    <i class="fa-solid fa-people-group about__feature-icon"></i>
+                    <p class="content-text">wspólna praca w zespole fizjoterapeutów</p>
                 </div>
+                <div class="about__feature about__feature-img about__feature-img--2"></div>
                 <div class="about__feature about__feature--3">
-                    <i class="fa-solid fa-dumbbell"></i>
-                    <p>trenowanie to moja pasja</p>
+                    <i class="fa-solid fa-dumbbell about__feature-icon"></i>
+                    <p class="content-text">trenowanie to moja pasja</p>
+                </div>
+                <div class="about__feature about__feature-img about__feature-img--3">
                 </div>
             </div>
+
+
+            <div class="about__courses">
+                <!-- <div class="about__course course">
+                    <div class="course__text-container">
+                        <p class="content-text">PFS PERSONAL TRAINER COMBO</p>
+                        <p class="content-text">ProFi Fitness School</p>
+                    </div>
+                    <div class="course__img-container"><img src="./img/about-small.jpg"
+                            alt="Certyfikat PFS PERSONAL TRAINER COMBO "></div>
+                </div> -->
+                <!-- <div class="about__course course">
+                    <div class="course__text-container">
+                        <p class="content-text">TRIGGER POINTS THERAPY - DRY NEEDLING</p>
+                        <p class="content-text">Spasja OCS Dawid Marciniak</p>
+                    </div>
+                    <div class="course__img-container"></div>
+                </div>
+                <div class="about__course course">
+                    <div class="course__text-container">
+                        <p class="content-text">MOŻLIWOŚCI PRACY Z BLIZNĄ</p>
+                        <p class="content-text">Projekt masaż</p>
+                    </div>
+                    <div class="course__img-container"></div>
+                </div>
+                <div class="about__course course">
+                    <div class="course__text-container">
+                        <p class="content-text">KINESIOLOGY TAPING W DYSFUNKCJACH
+                            MIĘŚNIOWO-SZKIELETOWYCH</p>
+                        <p class="content-text">Fizjoakademia</p>
+                    </div>
+                    <div class="course__img-container"></div>
+                </div>
+                <div class="about__course course">
+                    <div class="course__text-container">
+                        <p class="content-text">NeuroBark online</p>
+                        <p class="content-text">Projekt masaż</p>
+                    </div>
+                    <div class="course__img-container"></div>
+                </div>
+                <div class="about__course course">
+                    <div class="course__text-container">
+                        <p class="content-text">NeuroHead online</p>
+                        <p class="content-text">Projekt masaż</p>
+                    </div>
+                    <div class="course__img-container"></div>
+                </div> -->
+            </div>
+
+
         </section>
         <section class="offer section" id="offer">
             <div class="wrapper">
@@ -165,6 +220,8 @@
                         które wykonujesz są przeznaczone do twojego aktualnego poziomu treningowego - skontaktuj się
                         ze mną, a odpowiem na Twoje pytania i pomogę zbudować fundamenty ruchu.
                     </p>
+                    <a href="https://zarejestrowani.pl/w/fYRgNAKKZ1XhS_NUN3dwnQ/" target="_blanc"
+                        class="btn btn--animation link res-btn">rezerwacja</a>
                     <div class="contact__links">
                         <a href="tel:123456789" target="_blank" class="contact__link link">
                             <i class="fas fa-phone-alt contact__icon"></i>+48 123 456 789
@@ -179,8 +236,6 @@
                                     Sołtysowicka 19</span><span class="next-line">51-168
                                     Wrocław</span></span>
                         </a>
-                        <a href="https://zarejestrowani.pl/w/fYRgNAKKZ1XhS_NUN3dwnQ/" target="_blanc"
-                            class="btn btn--animation link res-btn">rezerwacja</a>
                     </div>
                 </div>
                 <div class="section__right-container">
@@ -188,15 +243,15 @@
                         <form class="contact__form form">
                             <div class="form__item">
                                 <label for="name">Imię:</label>
-                                <input type="text" id="name" name="name">
+                                <input type="text" id="name" name="name" required="true">
                             </div>
                             <div class="form__item">
                                 <label for="email">Adres e-mail:</label>
-                                <input type="email" id="email" name="email">
+                                <input type="email" id="email" name="email" required="true">
                             </div>
                             <div class="form__item">
                                 <label for="msg">Twoja wiadomość:</label>
-                                <textarea id="msg" name="msg"></textarea>
+                                <textarea id="msg" name="msg" required="true"></textarea>
                             </div>
                             <button type="submit" class="btn btn--animation">wyślij</button>
                         </form>
@@ -206,7 +261,7 @@
         </section>
     </main>
     <footer class="footer">
-        <p class="footer__text">&copy; <span class="footer__year"></span> Tomasz Obiegło</p>
+        <p class="footer__text">&copy; <span class="footer__year"></span> Paulina Staszyńska</p>
     </footer>
     <script src="./js/script.js"></script>
 </body>
