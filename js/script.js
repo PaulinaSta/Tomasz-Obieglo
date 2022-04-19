@@ -12,6 +12,7 @@ const allMenuElements = document.querySelectorAll('.menu__element-js')
 const allMenuItems = document.querySelectorAll('.menu__item')
 const menuLogo = document.querySelector('.menu__logo')
 const footerYear = document.querySelector('.footer__year')
+const aboutSection = document.querySelector('.about')
 
 const menuShow = () => {
 	menu.classList.toggle('menu--active')
@@ -36,6 +37,16 @@ const menuItemAnimation = () => {
 }
 
 burgerBtn.addEventListener('click', menuShow)
+
+const addBurgerBg = () => {
+	if (window.scrollY >= aboutSection.offsetTop) {
+		burgerBtn.classList.add('burger-btn-bg')
+	} else {
+		burgerBtn.classList.remove('burger-btn-bg')
+	}
+}
+
+window.addEventListener('scroll', addBurgerBg)
 
 const addMenuBg = () => {
 	if (window.scrollY >= 250) {

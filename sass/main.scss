@@ -80,6 +80,10 @@ body {
 			transition: transform 0.3s 0.1s;
 		}
 	}
+
+	&-bg {
+		background-color: rgba(255, 255, 255, 0.1);
+	}
 }
 
 .menu {
@@ -279,22 +283,52 @@ body {
 	}
 
 	&__courses {
+		// position: relative;
 		width: 100%;
-		margin-top: 2em;
-		background-color: #000;
+		padding-top: 6rem;
+		z-index: 0;
+
+		// .section__heading {
+		// 	color: $blackColor;
+
+		// 	&::before {
+		// 		background-color: $whiteColor;
+		// 	}
+		// }
+	}
+
+	&__courses-box {
+		display: grid;
+		grid-template-columns: 1fr;
+		grid-template-rows: repeat(6, auto);
+		gap: 2em;
 	}
 
 	&__course {
-		background-color: #555;
+		background-color: #222222;
+		// box-shadow: 0 0 10px #000;
 	}
 
 	.course {
-		&__text-container {
-			padding: 2em 1em;
+		display: flex;
+		flex-direction: column;
+		justify-content: space-between;
+		padding: 2em 1em;
+
+		&__description {
+			display: flex;
+			align-items: center;
+			margin-top: 1em;
+			cursor: pointer;
+
+			&:hover .course__icon {
+				transform: translateX(0.5em);
+			}
 		}
 
-		img {
-			width: 100%;
+		&__icon {
+			margin-right: 1.5em;
+			transition: transform 0.3s;
 		}
 	}
 }
@@ -302,8 +336,19 @@ body {
 // OFFER
 
 .offer {
+	position: relative;
 	flex-direction: column;
 	background-color: #222222;
+	z-index: 0;
+
+	.section__heading {
+		color: $blackColor;
+
+		&::before {
+			background-color: $whiteColor;
+		}
+	}
+
 	&__items {
 		display: grid;
 		grid-template-columns: 1fr;
@@ -315,7 +360,7 @@ body {
 		grid-column: 1/2;
 		display: flex;
 		flex-direction: column;
-		box-shadow: 2px 2px 4px 0 #000;
+		// box-shadow: 2px 2px 4px 0 #000;
 
 		&:hover .offer__img {
 			transform: scale(1.1);
@@ -373,10 +418,29 @@ body {
 		font-size: 1.8rem;
 	}
 
+	&__item-footer {
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+	}
+
 	&__text-footer {
 		margin-top: auto;
 		margin-bottom: 0;
 	}
+
+	// &__item-btn {
+	// 	&:hover .offer__item-icon {
+	// 		color: $accentColor;
+	// 	}
+	// }
+
+	// &__item-icon {
+	// 	padding: 1em;
+	// 	font-size: 2rem;
+	// 	color: $whiteColor;
+	// 	transition: color 0.3s;
+	// }
 
 	// &__reservation-box {
 	// 	position: relative;
@@ -565,10 +629,6 @@ body {
 		}
 	}
 
-	.section {
-		padding: 6rem 0;
-	}
-
 	.about {
 		&__features {
 			grid-template-columns: repeat(2, 1fr);
@@ -609,6 +669,11 @@ body {
 		&__feature-img--3 {
 			grid-column: 2/3;
 			grid-row: 3/4;
+		}
+
+		&__courses-box {
+			grid-template-columns: repeat(2, 1fr);
+			grid-template-rows: repeat(3, auto);
 		}
 	}
 
@@ -667,6 +732,12 @@ body {
 		&__feature {
 			flex: 1;
 			padding: 4em 4em;
+		}
+
+		&__courses {
+			.wrapper {
+				flex-direction: column;
+			}
 		}
 	}
 
@@ -815,6 +886,11 @@ body {
 			grid-column: 3/4;
 			grid-row: 2/3;
 			background-image: url('../img/feature3-big.jpg');
+		}
+
+		&__courses-box {
+			grid-template-columns: repeat(3, 1fr);
+			grid-template-rows: repeat(2, auto);
 		}
 	}
 

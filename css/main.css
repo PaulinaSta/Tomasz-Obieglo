@@ -95,7 +95,7 @@
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  padding: 4rem 0;
+  padding: 6rem 0;
 }
 
 .section__heading {
@@ -164,6 +164,16 @@
 .image__img {
   display: block;
   max-width: 100%;
+}
+
+.accent-box {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 240px;
+  background-color: #bcd150;
+  z-index: -1;
 }
 
 /* ----------------------------------------------
@@ -292,6 +302,10 @@ body {
   transition: -webkit-transform 0.3s 0.1s;
   transition: transform 0.3s 0.1s;
   transition: transform 0.3s 0.1s, -webkit-transform 0.3s 0.1s;
+}
+
+.burger-btn-bg {
+  background-color: rgba(255, 255, 255, 0.1);
 }
 
 .menu {
@@ -574,28 +588,78 @@ body {
 
 .about__courses {
   width: 100%;
-  margin-top: 2em;
-  background-color: #000;
+  padding-top: 6rem;
+  z-index: 0;
+}
+
+.about__courses-box {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr;
+      grid-template-columns: 1fr;
+  -ms-grid-rows: (auto)[6];
+      grid-template-rows: repeat(6, auto);
+  gap: 2em;
 }
 
 .about__course {
-  background-color: #555;
+  background-color: #222222;
 }
 
-.about .course__text-container {
+.about .course {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
   padding: 2em 1em;
 }
 
-.about .course img {
-  width: 100%;
+.about .course__description {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-top: 1em;
+  cursor: pointer;
+}
+
+.about .course__description:hover .course__icon {
+  -webkit-transform: translateX(0.5em);
+          transform: translateX(0.5em);
+}
+
+.about .course__icon {
+  margin-right: 1.5em;
+  -webkit-transition: -webkit-transform 0.3s;
+  transition: -webkit-transform 0.3s;
+  transition: transform 0.3s;
+  transition: transform 0.3s, -webkit-transform 0.3s;
 }
 
 .offer {
+  position: relative;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
   background-color: #222222;
+  z-index: 0;
+}
+
+.offer .section__heading {
+  color: #111111;
+}
+
+.offer .section__heading::before {
+  background-color: #ffffff;
 }
 
 .offer__items {
@@ -619,8 +683,6 @@ body {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  -webkit-box-shadow: 2px 2px 4px 0 #000;
-          box-shadow: 2px 2px 4px 0 #000;
 }
 
 .offer__item:hover .offer__img {
@@ -695,6 +757,18 @@ body {
 .offer__text-title {
   text-transform: uppercase;
   font-size: 1.8rem;
+}
+
+.offer__item-footer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
 }
 
 .offer__text-footer {
@@ -872,9 +946,6 @@ body {
   .menu__item {
     font-size: 2rem;
   }
-  .section {
-    padding: 6rem 0;
-  }
   .about__features {
     -ms-grid-columns: (1fr)[2];
         grid-template-columns: repeat(2, 1fr);
@@ -934,6 +1005,12 @@ body {
     -ms-grid-row-span: 1;
     grid-row: 3/4;
   }
+  .about__courses-box {
+    -ms-grid-columns: (1fr)[2];
+        grid-template-columns: repeat(2, 1fr);
+    -ms-grid-rows: (auto)[3];
+        grid-template-rows: repeat(3, auto);
+  }
   .offer__img-container {
     height: 300px;
   }
@@ -983,6 +1060,12 @@ body {
         -ms-flex: 1;
             flex: 1;
     padding: 4em 4em;
+  }
+  .about__courses .wrapper {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
   }
   .offer__img-container {
     height: 360px;
@@ -1127,6 +1210,12 @@ body {
     -ms-grid-row-span: 1;
     grid-row: 2/3;
     background-image: url("../img/feature3-big.jpg");
+  }
+  .about__courses-box {
+    -ms-grid-columns: (1fr)[3];
+        grid-template-columns: repeat(3, 1fr);
+    -ms-grid-rows: (auto)[2];
+        grid-template-rows: repeat(2, auto);
   }
   .offer__items {
     -ms-grid-columns: (1fr)[3];

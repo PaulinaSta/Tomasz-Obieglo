@@ -81,7 +81,7 @@
 
 .section {
 	@include flexCenter(center, center);
-	padding: 4rem 0;
+	padding: 6rem 0;
 
 	&__heading {
 		align-self: flex-start;
@@ -142,6 +142,16 @@
 		display: block;
 		max-width: 100%;
 	}
+}
+
+.accent-box {
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	height: 240px;
+	background-color: $accentColor;
+	z-index: -1;
 }
 
 // .img {
